@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const faqs = [
   {
     question: "How do I contact VG Software for support?",
-    answer: "You can reach our support team by emailing support@vgsoftware.com or by calling our customer service line at (+91) 76206-79565. We also offer live chat support on our website during business hours."
+    answer: "You can reach our support team by emailing support@vgsoftware.tech or by calling our customer service line at (+91) 76206-79565. We also offer live chat support on our website during business hours."
   },
   {
     question: "What services does VG Software offer?",
