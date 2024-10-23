@@ -2,15 +2,16 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { z } from 'zod';
 
+// Contact form schema validation
 const contactFormSchema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  phone: z.string().regex(/^\+?[\d\s-]{10,}$/),
-  serviceType: z.string(),
-  message: z.string().min(10),
+  name: z.string().min(2, "Name must be at least 2 characters."),
+  email: z.string().email("Invalid email address."),
+  phone: z.string().regex(/^\+?[\d\s-]{10,}$/, "Invalid phone number."),
+  serviceType: z.string().min(1, "Service type is required."),
+  message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
-// Rate limiting setup
+// Rate limit setup
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
 const MAX_REQUESTS = 5;
 const requestLog = new Map<string, { count: number; timestamp: number }>();
@@ -37,36 +38,36 @@ const isRateLimited = (ip: string): boolean => {
   return false;
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
+// Nodemailer transporter setup using environment variables
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT || "465"),
+  secure: process.env.SMTP_SECURE === "true", // true for SSL, false for TLS
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
+  const clientIp = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown') as string;
   const ip = Array.isArray(clientIp) ? clientIp[0] : clientIp;
 
   if (isRateLimited(ip)) {
-    return res.status(429).json({ message: 'Too many requests. Please try again later.' });
+    return res.status(429).json({ message: "Too many requests. Please try again later." });
   }
 
   try {
     const data = contactFormSchema.parse(req.body);
 
-    // Create Nodemailer transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    // Verify the SMTP connection before sending the email
+    await transporter.verify();
+    console.log("SMTP Server is ready to take messages.");
 
-    // Email content with sanitized data
     const mailOptions = {
       from: process.env.SMTP_FROM,
       to: 'vighnarajendrasoftware@gmail.com',
@@ -118,11 +119,12 @@ export default async function handler(
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Message sent:", info.messageId);
 
-    res.status(200).json({ message: 'Message sent successfully' });
+    res.status(200).json({ message: "Message sent successfully" });
   } catch (error) {
-    console.error('Contact form error:', error);
-    res.status(500).json({ message: 'Failed to send message' });
+    console.error("Contact form error:", error);
+    res.status(500).json({ message: "Failed to send message" });
   }
 }
