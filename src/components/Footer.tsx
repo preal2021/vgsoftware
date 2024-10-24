@@ -33,11 +33,11 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/services"
                   className="text-gray-400 hover:text-orange-500 transition-colors"
                   aria-label="View Careers"
                 >
-                  Careers
+                  Services
                 </Link>
               </li>
               <li>
