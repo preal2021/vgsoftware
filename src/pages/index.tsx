@@ -19,7 +19,7 @@ export default function Home() {
           content="VG Software provides cutting-edge software solutions to empower businesses. Discover our custom development, AI integration, cybersecurity, and performance optimization services."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <Header />
