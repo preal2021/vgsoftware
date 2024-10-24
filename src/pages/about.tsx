@@ -191,7 +191,7 @@ const AboutPage = () => {
                 {
                   title: "Where we work",
                   content:
-                    "Global reach with offices in key locations around the world.",
+                    "With a global mindset, we operate remotely and have a central office to support our operations.",
                 },
               ].map((item, index) => (
                 <motion.div
