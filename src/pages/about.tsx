@@ -46,14 +46,14 @@ const AboutPage = () => {
                   crafting digital experiences that transform businesses and
                   empower users.
                 </p>
-                <motion.button
+                {/* <motion.button
                   className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 hover:from-orange-600 hover:to-pink-600 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span>Discover Our Story</span>
                   <ArrowRight className="w-5 h-5" />
-                </motion.button>
+                </motion.button> */}
               </motion.div>
               <div className="relative">
                 <motion.div
