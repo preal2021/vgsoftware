@@ -144,7 +144,7 @@ const GraphicDesignPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/graphic-design"
+          href="https://www.vgsoftware.tech/services/graphic-design"
         />
         <meta
           property="og:title"
@@ -157,7 +157,7 @@ const GraphicDesignPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/graphic-design"
+          content="https://www.vgsoftware.tech/services/graphic-design"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

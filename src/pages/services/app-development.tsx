@@ -144,7 +144,7 @@ const AppDevelopmentPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/app-development"
+          href="https://www.vgsoftware.tech/services/app-development"
         />
         <meta
           property="og:title"
@@ -157,7 +157,7 @@ const AppDevelopmentPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/app-development"
+          content="https://www.vgsoftware.tech/services/app-development"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

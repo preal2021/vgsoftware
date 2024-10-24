@@ -143,7 +143,7 @@ const CloudServicesPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/cloud-services"
+          href="https://www.vgsoftware.tech/services/cloud-services"
         />
         <meta property="og:title" content="Cloud Services - VG Software" />
         <meta
@@ -153,7 +153,7 @@ const CloudServicesPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/cloud-services"
+          content="https://www.vgsoftware.tech/services/cloud-services"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cloud Services - VG Software" />

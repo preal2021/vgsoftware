@@ -141,7 +141,7 @@ const IoTSolutionsPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/iot-solutions"
+          href="https://www.vgsoftware.tech/services/iot-solutions"
         />
         <meta property="og:title" content="IoT Solutions - VG Software" />
         <meta
@@ -151,7 +151,7 @@ const IoTSolutionsPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/iot-solutions"
+          content="https://www.vgsoftware.tech/services/iot-solutions"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="IoT Solutions - VG Software" />

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from "react";
+import Head from "next/head";
+import { motion } from "framer-motion";
 import {
   Lock,
   Shield,
@@ -11,119 +11,119 @@ import {
   Globe,
   FileText,
   ArrowRight,
-} from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+} from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const CyberSecurityPage = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Comprehensive Protection',
+      title: "Comprehensive Protection",
       description:
-        'We provide robust security measures to protect your digital assets and sensitive information.',
+        "We provide robust security measures to protect your digital assets and sensitive information.",
     },
     {
       icon: UserCheck,
-      title: 'Proactive Threat Detection',
+      title: "Proactive Threat Detection",
       description:
-        'Our systems monitor for potential threats in real time, ensuring swift responses to any breaches.',
+        "Our systems monitor for potential threats in real time, ensuring swift responses to any breaches.",
     },
     {
       icon: Lock,
-      title: 'Data Privacy Assurance',
+      title: "Data Privacy Assurance",
       description:
-        'We prioritize the privacy of your data, implementing stringent protocols to prevent unauthorized access.',
+        "We prioritize the privacy of your data, implementing stringent protocols to prevent unauthorized access.",
     },
     {
       icon: Bug,
-      title: 'Vulnerability Assessments',
+      title: "Vulnerability Assessments",
       description:
-        'Our team regularly conducts assessments to identify and mitigate potential security weaknesses.',
+        "Our team regularly conducts assessments to identify and mitigate potential security weaknesses.",
     },
   ];
 
   const whyChooseUs = [
     {
       icon: ShieldOff,
-      title: '24/7 Security Monitoring',
+      title: "24/7 Security Monitoring",
       description:
-        'Our dedicated team continuously monitors your systems to detect and respond to threats before they escalate.',
+        "Our dedicated team continuously monitors your systems to detect and respond to threats before they escalate.",
       benefits: [
-        'Minimized risk of data breaches',
-        'Rapid incident response',
-        'Enhanced peace of mind for your organization',
+        "Minimized risk of data breaches",
+        "Rapid incident response",
+        "Enhanced peace of mind for your organization",
       ],
     },
     {
       icon: Globe,
-      title: 'Global Compliance',
+      title: "Global Compliance",
       description:
         "We ensure your security practices comply with global standards and regulations, safeguarding your business's reputation.",
       benefits: [
-        'Adherence to GDPR, HIPAA, and more',
-        'Reduced risk of legal penalties',
-        'Increased trust from clients and stakeholders',
+        "Adherence to GDPR, HIPAA, and more",
+        "Reduced risk of legal penalties",
+        "Increased trust from clients and stakeholders",
       ],
     },
     {
       icon: Key,
-      title: 'Customized Security Solutions',
+      title: "Customized Security Solutions",
       description:
-        'We tailor our security strategies to meet your specific needs and challenges, ensuring maximum effectiveness.',
+        "We tailor our security strategies to meet your specific needs and challenges, ensuring maximum effectiveness.",
       benefits: [
-        'Flexibility to adapt to changing threats',
-        'Alignment with your business goals',
-        'Cost-effective security measures',
+        "Flexibility to adapt to changing threats",
+        "Alignment with your business goals",
+        "Cost-effective security measures",
       ],
     },
     {
       icon: FileText,
-      title: 'Security Awareness Training',
+      title: "Security Awareness Training",
       description:
-        'We provide training for your staff to recognize and respond to security threats, creating a culture of security within your organization.',
+        "We provide training for your staff to recognize and respond to security threats, creating a culture of security within your organization.",
       benefits: [
-        'Reduced risk of human error',
-        'Empowered employees who recognize threats',
-        'Improved overall security posture',
+        "Reduced risk of human error",
+        "Empowered employees who recognize threats",
+        "Improved overall security posture",
       ],
     },
   ];
 
   const helpBusinessPoints = [
-    'Mitigate risks through proactive security measures',
-    'Protect sensitive data and customer information',
-    'Ensure compliance with industry regulations',
-    'Enhance business reputation and customer trust',
-    'Reduce potential financial losses from breaches',
-    'Implement effective incident response strategies',
+    "Mitigate risks through proactive security measures",
+    "Protect sensitive data and customer information",
+    "Ensure compliance with industry regulations",
+    "Enhance business reputation and customer trust",
+    "Reduce potential financial losses from breaches",
+    "Implement effective incident response strategies",
   ];
 
   const testimonials = [
     {
-      name: 'Alice Johnson',
-      company: 'Finance Secure Corp.',
+      name: "Alice Johnson",
+      company: "Finance Secure Corp.",
       quote:
         "The security solutions from VG Software have transformed our approach to cyber threats. We've seen a dramatic reduction in incidents!",
     },
     {
-      name: 'Mark Thompson',
-      company: 'Tech Solutions Ltd.',
+      name: "Mark Thompson",
+      company: "Tech Solutions Ltd.",
       quote:
-        'VG Software’s expertise in cyber security has provided us with confidence. Our systems are safer than ever before!',
+        "VG Software’s expertise in cyber security has provided us with confidence. Our systems are safer than ever before!",
     },
   ];
 
   const caseStudies = [
     {
-      title: 'Healthcare Data Protection',
+      title: "Healthcare Data Protection",
       description:
-        'Achieved 100% compliance with HIPAA regulations while safeguarding sensitive patient data from breaches.',
+        "Achieved 100% compliance with HIPAA regulations while safeguarding sensitive patient data from breaches.",
     },
     {
-      title: 'E-commerce Security Upgrade',
+      title: "E-commerce Security Upgrade",
       description:
-        'Enhanced transaction security, resulting in a 60% decrease in fraudulent activities on our platform.',
+        "Enhanced transaction security, resulting in a 60% decrease in fraudulent activities on our platform.",
     },
   ];
 
@@ -144,7 +144,7 @@ const CyberSecurityPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/cyber-security"
+          href="https://www.vgsoftware.tech/services/cyber-security"
         />
         <meta
           property="og:title"
@@ -157,7 +157,7 @@ const CyberSecurityPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/cyber-security"
+          content="https://www.vgsoftware.tech/services/cyber-security"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -201,7 +201,7 @@ const CyberSecurityPage = () => {
           transition={{
             duration: 10,
             repeat: Infinity,
-            repeatType: 'reverse',
+            repeatType: "reverse",
           }}
         />
 
@@ -214,7 +214,7 @@ const CyberSecurityPage = () => {
           transition={{
             duration: 15,
             repeat: Infinity,
-            repeatType: 'reverse',
+            repeatType: "reverse",
           }}
         />
 
@@ -265,18 +265,18 @@ const CyberSecurityPage = () => {
             </h2>
             <div className="flex flex-wrap justify-center">
               {[
-                'Risk Assessment',
-                'Security Planning',
-                'Implementation',
-                'Monitoring',
-                'Response Strategy',
+                "Risk Assessment",
+                "Security Planning",
+                "Implementation",
+                "Monitoring",
+                "Response Strategy",
               ].map((step, index) => (
                 <motion.div
                   key={index}
                   className="bg-white text-orange-600 m-2 p-4 rounded-full font-semibold"
                   whileHover={{
                     scale: 1.1,
-                    backgroundColor: 'rgba(255, 165, 0, 0.1)',
+                    backgroundColor: "rgba(255, 165, 0, 0.1)",
                   }}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -361,7 +361,7 @@ const CyberSecurityPage = () => {
           </div>
         </section>
 
-        <section className="relative z-10 py-20 px-4 bg-gradient-to-r from-orange-200 to-red-200">
+        {/* <section className="relative z-10 py-20 px-4 bg-gradient-to-r from-orange-200 to-red-200">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-orange-600">
               Case Studies
@@ -414,7 +414,7 @@ const CyberSecurityPage = () => {
               Contact Us <ArrowRight className="inline ml-2" />
             </motion.a>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>

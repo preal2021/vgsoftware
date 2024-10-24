@@ -144,7 +144,7 @@ const UIUXDesignPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/ui-ux-design"
+          href="https://www.vgsoftware.tech/services/ui-ux-design"
         />
         <meta
           property="og:title"
@@ -157,7 +157,7 @@ const UIUXDesignPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/ui-ux-design"
+          content="https://www.vgsoftware.tech/services/ui-ux-design"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

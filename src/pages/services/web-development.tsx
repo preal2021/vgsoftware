@@ -145,7 +145,7 @@ const WebDevelopmentPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/web-development"
+          href="https://www.vgsoftware.tech/services/web-development"
         />
         <meta
           property="og:title"
@@ -158,7 +158,7 @@ const WebDevelopmentPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/web-development"
+          content="https://www.vgsoftware.tech/services/web-development"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

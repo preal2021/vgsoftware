@@ -143,7 +143,7 @@ const AutomationServicesPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/automation"
+          href="https://www.vgsoftware.tech/services/automation"
         />
         <meta property="og:title" content="Automation Services - VG Software" />
         <meta
@@ -153,7 +153,7 @@ const AutomationServicesPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/automation"
+          content="https://www.vgsoftware.tech/services/automation"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

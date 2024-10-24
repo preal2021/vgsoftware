@@ -143,7 +143,7 @@ const SEOPage = () => {
           name="keywords"
           content="SEO, search engine optimization, keyword research, link building, on-page SEO, digital marketing"
         />
-        <link rel="canonical" href="https://www.vgsoftware.com/services/seo" />
+        <link rel="canonical" href="https://www.vgsoftware.tech/services/seo" />
         <meta property="og:title" content="SEO Services - VG Software" />
         <meta
           property="og:description"
@@ -152,7 +152,7 @@ const SEOPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/seo"
+          content="https://www.vgsoftware.tech/services/seo"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SEO Services - VG Software" />

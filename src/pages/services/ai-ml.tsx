@@ -144,7 +144,7 @@ const AIMLPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/ai-ml"
+          href="https://www.vgsoftware.tech/services/ai-ml"
         />
         <meta property="og:title" content="AI/ML Services - VG Software" />
         <meta
@@ -154,7 +154,7 @@ const AIMLPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/ai-ml"
+          content="https://www.vgsoftware.tech/services/ai-ml"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI/ML Services - VG Software" />
@@ -273,7 +273,7 @@ const AIMLPage = () => {
                   whileHover={{
                     scale: 1.1,
                     backgroundColor: "#FFF",
-                    color: "#f97316",
+                    color: "#DB2777",
                   }}
                   whileTap={{ scale: 0.95 }}
                 >

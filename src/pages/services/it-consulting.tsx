@@ -144,7 +144,7 @@ const ITConsultingPage = () => {
         />
         <link
           rel="canonical"
-          href="https://www.vgsoftware.com/services/it-consulting"
+          href="https://www.vgsoftware.tech/services/it-consulting"
         />
         <meta
           property="og:title"
@@ -157,7 +157,7 @@ const ITConsultingPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.vgsoftware.com/services/it-consulting"
+          content="https://www.vgsoftware.tech/services/it-consulting"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
