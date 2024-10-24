@@ -22,11 +22,13 @@ const AboutPage = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              src="/software-deveploment-team.avif"
               alt="Software development team"
               layout="fill"
               objectFit="cover"
               className="opacity-20"
+              priority
+              quality={75} // Optimized quality setting
             />
           </div>
           <div className="container mx-auto px-4 z-10">
@@ -44,14 +46,14 @@ const AboutPage = () => {
                   crafting digital experiences that transform businesses and
                   empower users.
                 </p>
-{/*                 <motion.button
+                <motion.button
                   className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 hover:from-orange-600 hover:to-pink-600 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span>Discover Our Story</span>
                   <ArrowRight className="w-5 h-5" />
-                </motion.button> */}
+                </motion.button>
               </motion.div>
               <div className="relative">
                 <motion.div
@@ -90,6 +92,8 @@ const AboutPage = () => {
                     width={600}
                     height={400}
                     className="rounded-lg shadow-2xl"
+                    priority
+                    quality={75} // Optimized quality setting
                   />
                 </motion.div>
               </div>
