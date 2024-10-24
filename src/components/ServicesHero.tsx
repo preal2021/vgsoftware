@@ -103,7 +103,7 @@ const ServicesHero = () => {
       {/* Decorative elements */}
       {/* Large Circle for Desktop View */}
       <motion.div
-        className="absolute top-[25%] left-[2%] w-24 h-24 bg-orange-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
+        className="absolute top-[15%] left-[2%] w-32 h-32 bg-orange-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
         animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
@@ -115,7 +115,7 @@ const ServicesHero = () => {
 
       {/* Small Circles for Smaller Screens */}
       <motion.div
-        className="absolute top-[36%] left-[4%] w-16 h-16 bg-orange-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
+        className="absolute top-[36%] left-[4%] w-24 h-24 bg-orange-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
         animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
