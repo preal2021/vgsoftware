@@ -25,7 +25,7 @@ export default function Services() {
           content="VG Software, Software Services, UI/UX Design, Web Development, Cloud Services, SEO, App Development, Automation, AI/ML, Custom Software, Graphic Design, Cyber Security, IT Consulting"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-white">
         <Header />
