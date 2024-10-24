@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -11,40 +11,13 @@ import {
 } from "lucide-react";
 
 const ServicesHero = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   const values = [
-    {
-      icon: BarChart,
-      title: "Data-Driven Insights",
-      description: "Utilizing data analytics for informed decision-making.",
-    },
-    {
-      icon: Smile,
-      title: "Enhanced User Experience",
-      description: "Creating designs that are intuitive and user-friendly.",
-    },
-    {
-      icon: Zap,
-      title: "Increased Efficiency",
-      description: "Automating processes to save time and reduce errors.",
-    },
-    {
-      icon: Link,
-      title: "Seamless Integration",
-      description: "Integrating systems for smooth workflows and operations.",
-    },
-    {
-      icon: Shield,
-      title: "Robust Solutions",
-      description:
-        "Building scalable and secure solutions tailored to your needs.",
-    },
-    {
-      icon: PhoneCall,
-      title: "24/7 Support",
-      description: "Providing continuous support to ensure system reliability.",
-    },
+    { icon: BarChart, title: "Data-Driven Insights" },
+    { icon: Smile, title: "Enhanced User Experience" },
+    { icon: Zap, title: "Increased Efficiency" },
+    { icon: Link, title: "Seamless Integration" },
+    { icon: Shield, title: "Robust Solutions" },
+    { icon: PhoneCall, title: "24/7 Support" },
   ];
 
   const scrollToOfferings = () => {
@@ -59,7 +32,7 @@ const ServicesHero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <motion.div
-            className="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0"
+            className="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 relative z-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -87,13 +60,13 @@ const ServicesHero = () => {
           </motion.div>
 
           <motion.div
-            className="w-full lg:w-1/2 lg:pl-12"
+            className="w-full lg:w-1/2 lg:pl-12 relative z-10"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-red-300 rounded-full opacity-20 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-red-300 rounded-full opacity-20 blur-3xl z-0"></div>
               <div className="relative z-10">
                 <motion.div
                   className="grid grid-cols-2 gap-6"
@@ -101,34 +74,23 @@ const ServicesHero = () => {
                   animate="visible"
                   variants={{
                     visible: {
-                      transition: {
-                        staggerChildren: 0.1,
-                      },
+                      transition: { staggerChildren: 0.1 },
                     },
                   }}
                 >
                   {values.map((value, index) => (
                     <motion.div
                       key={index}
-                      className={`bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg rounded-lg p-6 shadow-lg flex flex-col items-center justify-center ${
-                        hoveredIndex === index ? "scale-105 shadow-xl" : ""
-                      }`}
+                      className="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg rounded-lg p-6 shadow-lg flex flex-col items-center justify-center"
                       variants={{
                         hidden: { opacity: 0, y: 20 },
                         visible: { opacity: 1, y: 0 },
                       }}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
                     >
                       <value.icon className="text-orange-500 w-12 h-12 mb-4" />
-                      <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">
+                      <h3 className="text-lg font-semibold text-gray-800 text-center">
                         {value.title}
                       </h3>
-                      {hoveredIndex === index && (
-                        <p className="text-gray-600 text-sm text-center mt-4">
-                          {value.description}
-                        </p>
-                      )}
                     </motion.div>
                   ))}
                 </motion.div>
@@ -139,29 +101,28 @@ const ServicesHero = () => {
       </div>
 
       {/* Decorative elements */}
+      {/* Large Circle for Desktop View */}
       <motion.div
-        className="absolute top-1/4 left-10 w-20 h-20 bg-orange-300 rounded-full opacity-50"
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
+        className="absolute top-[25%] left-[10%] w-32 h-32 bg-orange-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
+        animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
       <motion.div
-        className="absolute bottom-1/4 right-10 w-32 h-32 bg-red-300 rounded-full opacity-50"
-        animate={{
-          scale: [1, 1.3, 1],
-          rotate: [0, -180, -360],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
+        className="absolute bottom-[20%] right-[10%] w-48 h-48 bg-red-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
+        animate={{ scale: [1, 1.3, 1], rotate: [0, -180, -360] }}
+        transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
+      ></motion.div>
+
+      {/* Small Circles for Smaller Screens */}
+      <motion.div
+        className="absolute top-[30%] left-[5%] w-24 h-24 bg-orange-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
+        animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+      ></motion.div>
+      <motion.div
+        className="absolute bottom-[15%] right-[5%] w-32 h-32 bg-red-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
+        animate={{ scale: [1, 1.3, 1], rotate: [0, -180, -360] }}
+        transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
     </section>
   );
