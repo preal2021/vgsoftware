@@ -15,6 +15,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Service List
 const services = [
@@ -103,7 +104,7 @@ const Hero: React.FC = () => {
             <div className="relative flex justify-center items-center">
               {/* Center Image */}
               <Image
-                src="/hero-session.webp"
+                src="/hero-image.avif"
                 alt="VG Software Logo"
                 width={300}
                 height={300}
@@ -186,14 +187,16 @@ const Hero: React.FC = () => {
               Empowering businesses with cutting-edge software solutions that
               drive growth and efficiency.
             </p>
-            <motion.button
-              className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg flex items-center justify-center mx-auto lg:mx-0"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-              <ArrowRight className="ml-2" />
-            </motion.button>
+            <Link href={"/contact"}>
+              <motion.button
+                className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg flex items-center justify-center mx-auto lg:mx-0"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Started
+                <ArrowRight className="ml-2" />
+              </motion.button>
+            </Link>
           </OptimizedMotionDiv>
         </div>
       </div>
