@@ -103,24 +103,24 @@ const ServicesHero = () => {
       {/* Decorative elements */}
       {/* Large Circle for Desktop View */}
       <motion.div
-        className="absolute top-[25%] left-[10%] w-32 h-32 bg-orange-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
+        className="absolute top-[25%] left-[2%] w-24 h-24 bg-orange-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
         animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
       <motion.div
-        className="absolute bottom-[20%] right-[10%] w-48 h-48 bg-red-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
+        className="absolute bottom-[10%] right-[2%] w-48 h-48 bg-red-300 rounded-full opacity-50 hidden md:block" // Medium size for medium screens
         animate={{ scale: [1, 1.3, 1], rotate: [0, -180, -360] }}
         transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
 
       {/* Small Circles for Smaller Screens */}
       <motion.div
-        className="absolute top-[30%] left-[5%] w-24 h-24 bg-orange-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
+        className="absolute top-[36%] left-[4%] w-16 h-16 bg-orange-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
         animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
       <motion.div
-        className="absolute bottom-[15%] right-[5%] w-32 h-32 bg-red-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
+        className="absolute bottom-[5%] right-[5%] w-32 h-32 bg-red-300 rounded-full opacity-50 block sm:hidden" // Increased size for small screens
         animate={{ scale: [1, 1.3, 1], rotate: [0, -180, -360] }}
         transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
